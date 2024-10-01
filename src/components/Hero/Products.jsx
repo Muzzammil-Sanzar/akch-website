@@ -5,7 +5,7 @@ import { FaStar } from "react-icons/fa6";
 export default function Products() {
   return (
     <div className="space-y-11">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap gap-y-5 items-center justify-between">
         <h2 className="text-3xl font-medium">Popular Products</h2>
         <div className="flex items-center gap-3 bg-orange-150 rounded-full font-medium px-7 py-4 text-white">
           <button>View all</button>

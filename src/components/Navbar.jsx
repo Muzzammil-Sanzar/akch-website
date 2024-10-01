@@ -6,9 +6,12 @@ import Products from "../utility/Products";
 import { IoSearchOutline } from "react-icons/io5";
 import { GoBell } from "react-icons/go";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { useState } from 'react';
 
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className=" ">
       <div className="bg-orange-150 text-white text-xs py-3  ">
@@ -36,7 +39,7 @@ export default function Navbar() {
                 <p>About Us</p>
                 <p>Contact Us</p>
               </div>
-              <div className=" flex items-center gap-6 xl:gap-10 xl1:gap-20">
+              <div className=" hidden lg:flex items-center gap-6 xl:gap-10 xl1:gap-20">
                 <div className="flex items-center gap-2.5">
                   <div className="bg-orange-250 p-3 rounded-full">
                     <IoSearchOutline className="w-5 h-5" />
@@ -53,10 +56,34 @@ export default function Navbar() {
                   <button className="font-semibold text-sm text-white bg-orange-150 rounded-full py-2 px-9">Login</button>
                 </div>
               </div>
+              <div className="lg:hidden">
+                <button onClick={() => setMenuOpen(!menuOpen)} className="text-orange-150">
+                  {menuOpen ? <AiOutlineClose className="w-6 h-6" /> : <AiOutlineMenu className="w-6 h-6" />}
+                </button>
+              </div>
             </div>
           </CommonPadding>
         </div>
       </CommonSizes>
+      {/* Mobile Menu */}
+      <aside
+        className={`fixed top-0 left-0 w-64 h-screen z-40 bg-white transition-transform transform ${menuOpen ? 'translate-x-0' : '-translate-x-full'
+          }`}
+      >
+        <div className="h-full px-5 py-4 overflow-y-auto">
+          <ul className="space-y-6 font-semibold text-gray-800">
+            <li><p>Home</p></li>
+            <li><Categories /></li>
+            <li><Products /></li>
+            <li><p>About Us</p></li>
+            <li><p>Contact Us</p></li>
+            <li className="flex gap-4">
+              <button className="font-semibold">Sign Up</button>
+              <button className="font-semibold text-sm text-white bg-orange-150 rounded-full py-2 px-9">Login</button>
+            </li>
+          </ul>
+        </div>
+      </aside>
     </div>
   )
 }

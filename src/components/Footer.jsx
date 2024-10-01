@@ -16,16 +16,16 @@ export default function Footer() {
       <div className="bg-[#FFEBC7] py-16">
         <CommonSizes>
           <CommonPadding>
-            <div className="flex items-center justify-between gap-12">
-              <div className="basis-[58%]">
-                <h2 className="text-5xl salsa">Get a 20% Discount & Offers on Your First Order!</h2>
+            <div className="flex flex-wrap lg:flex-nowrap items-center justify-between gap-4 lg:gap-12">
+              <div className="basis-full lg:basis-[58%]">
+                <h2 className="text-2xl sm:text-3xl lg:text-5xl salsa">Get a 20% Discount & Offers on Your First Order!</h2>
               </div>
-              <div className="basis-[45%] space-y-4">
+              <div className="basis-full lg:basis-[45%] space-y-4">
                 <div className="space-y-1">
-                  <h2 className="text-2xl font-bold capitalize">news letter</h2>
-                  <p className="text-gray-250">Subscribe to our new channel to get latest updates</p>
+                  <h2 className="text-lg lg:text-2xl font-medium lg:font-bold capitalize">news letter</h2>
+                  <p className="text-gray-250 text-sm lg:text-base">Subscribe to our new channel to get latest updates</p>
                 </div>
-                <div className="flex items-center bg-white px-2 py-2 border border-gray-300 rounded-full shadow-md max-w-md">
+                <div className="flex flex-wrap items-center justify-center bg-white px-6 xxs:px-2 py-2 border border-gray-300 rounded-full shadow-md overflow-hidden max-w-md">
                   <input
                     type="text"
                     className="flex-grow p-2 text-gray-700 focus:outline-none rounded-l-full"
