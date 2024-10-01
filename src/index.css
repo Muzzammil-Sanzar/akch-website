@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.akch {
+  font-family: "Aclonica", sans-serif;
+}
+
+.salsa {
+  font-family: "Salsa", cursive;
+}
+
+.rammetto {
+  font-family: "Rammetto One", sans-serif;
+}
