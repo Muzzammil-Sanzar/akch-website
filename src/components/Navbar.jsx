@@ -39,7 +39,7 @@ export default function Navbar() {
                 <p>About Us</p>
                 <p>Contact Us</p>
               </div>
-              <div className=" hidden lg:flex items-center gap-6 xl:gap-10 xl1:gap-20">
+              <div className=" hidden lg:flex items-center gap-6 xl:gap-8">
                 <div className="flex items-center gap-2.5">
                   <div className="bg-orange-250 p-3 rounded-full">
                     <IoSearchOutline className="w-5 h-5" />

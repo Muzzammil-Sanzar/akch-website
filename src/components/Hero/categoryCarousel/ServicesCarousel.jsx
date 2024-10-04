@@ -66,7 +66,7 @@ export default function ServicesCarousel({ openModal }) {
                     <img src={service.image} alt={service.alt} />
                   </div>
                   <div className="">
-                    <h3 className="text-lg font-semibold text-gray-150">{service.title}</h3>
+                    <h3 className="text-lg font-semibold text-gray-150 whitespace-nowrap">{service.title}</h3>
                     <div className="">
                       <p className="text-gray-250 line-clamp-4">
                         {service.description} items

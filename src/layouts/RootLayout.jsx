@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 export default function RootLayout({ }) {
   return (
-    <div className="space-y-24">
+    <div className="">
       <Navbar />
       <Outlet />
       <Footer />

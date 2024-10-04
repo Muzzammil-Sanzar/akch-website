@@ -5,7 +5,7 @@ export default function SummerOffer() {
   return (
     <div className="bg-gradient-to-r from-[#EFA937E5] to-[#EFA937A1]">
       <CommonSizes>
-        <div className="relative pt-14">
+        <div className="relative pt-14 lg:pb-14">
           <CommonPadding>
             <div className="flex flex-wrap justify-between">
               <div className="basis-full lg:basis-1/3 space-y-1">

@@ -5,6 +5,7 @@ import Facebook from "../assets/Facebook.svg";
 import linkdin from "../assets/Linkedin.svg";
 import twitter from "../assets/Twitter.svg";
 import Instagram from "../assets/Instagram.svg";
+import visa from "../assets/visa.png";
 import CommonPadding from "../layouts/CommonPadding";
 import CommonSizes from "../layouts/CommonSizes";
 
@@ -12,7 +13,7 @@ import CommonSizes from "../layouts/CommonSizes";
 
 export default function Footer() {
   return (
-    <div>
+    <div className="mt-20">
       <div className="bg-[#FFEBC7] py-16">
         <CommonSizes>
           <CommonPadding>
@@ -96,6 +97,19 @@ export default function Footer() {
                   <img src={twitter} alt="logo" />
                   <img src={Instagram} alt="logo" />
                 </div>
+              </div>
+            </div>
+
+          </CommonPadding>
+        </CommonSizes>
+      </div>
+      <div className="bg-orange-150 text-white py-5">
+        <CommonSizes>
+          <CommonPadding>
+            <div className="flex items-center justify-between">
+              <p>Copyright © 2024 all rights reserved.</p>
+              <div>
+                <img src={visa} alt="akch" />
               </div>
             </div>
           </CommonPadding>
