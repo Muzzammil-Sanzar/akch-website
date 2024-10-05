@@ -53,9 +53,9 @@ export default function MyProfile() {
               className="w-full px-5 py-6 border rounded-xl text-sm font-medium focus:border-orange-150 outline-none"
             />
           </div>
-          <div className='text-right'>
+          {/* <div className='text-right'>
             <button className='bg-orange-150 px-11 py-3 rounded-full text-white font-semibold'>Save Change</button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

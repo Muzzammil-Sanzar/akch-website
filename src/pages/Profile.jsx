@@ -11,9 +11,9 @@ export default function Profile() {
       <CartNav title={"my account"} />
       <CommonSizes>
         <CommonPadding>
-          <div className='flex'>
+          <div className='flex gap-2 md:gap-6 lg:gap-9'>
             <Sidebar />
-            <div className='lg:ml-9 w-full'>
+            <div className='w-full'>
               <Outlet />
             </div>
           </div>
