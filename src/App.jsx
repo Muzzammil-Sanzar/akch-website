@@ -12,6 +12,7 @@ import ActiveOrder from './pages/ActiveOrder';
 import CompleteOrders from './pages/CompleteOrders';
 import ProfileFaqs from './pages/ProfileFaqs';
 import HelpSupport from './pages/HelpSupport';
+import AllProducts from './pages/AllProducts';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path='/' element={<RootLayout />}>
           <Route index element={<HomePage />} />
+          <Route path='products' element={<AllProducts />} />
           <Route path='product' element={<ProductDetails />} />
           <Route path='cart' element={<Cart />} />
           <Route path='checkout' element={<Checkout />} />

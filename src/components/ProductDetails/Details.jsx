@@ -7,8 +7,8 @@ export default function Details() {
   return (
     <div className="space-y-20">
       <div className="space-y-10">
-        <div className="flex justify-between">
-          <div className="basis-[60%] space-y-5">
+        <div className="flex flex-wrap gap-y-5 justify-between">
+          <div className="md:basis-[60%] space-y-5">
             <div className="space-y-3">
               <p className="text-sm text-gray-250">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               <p className="text-sm text-gray-250">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -43,7 +43,7 @@ export default function Details() {
               </div>
             </div>
           </div>
-          <div className="basis-[35%]">
+          <div className="md:basis-[35%]">
             <div className="h-[331px] overflow-hidden">
               <img
                 width={471}

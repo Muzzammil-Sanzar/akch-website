@@ -6,21 +6,21 @@ import office from '../assets/office.png';
 export default function ProfileLocation() {
   const [selectedAddress, setSelectedAddress] = useState('home');
   return (
-    <div className="bg-white px-7 py-10 rounded-3xl shadow border space-y-5">
+    <div className="bg-white px-3.5 sm:px-7 py-10 rounded-3xl shadow border space-y-5">
       <h2 className="text-xl font-bold">Address</h2>
       <div className="space-y-4">
         {/* Address: Home */}
         <div
-          className={`p-4 flex items-center justify-between cursor-pointer `}
+          className={`sm:p-4 flex flex-wrap gap-y-7 items-center justify-center sm:justify-between cursor-pointer `}
           onClick={() => setSelectedAddress('home')}
         >
-          <div className="flex items-center space-x-4">
+          <div className="flex flex-wrap gap-y-4 items-center justify-center space-x-4">
             <img
               src={marker} // Placeholder for address image
               alt="My Home"
               className="w-16 h-16"
             />
-            <div>
+            <div className='text-center sm:text-start'>
               <h3 className="text-lg font-semibold">My Home</h3>
               <p className="text-gray-250 text-sm">46 Larkrow, Main Street, UK</p>
             </div>
@@ -35,16 +35,16 @@ export default function ProfileLocation() {
 
         {/* Address: Office */}
         <div
-          className={`p-4 rounded-lg flex items-center justify-between cursor-pointer`}
+          className={`sm:p-4 flex flex-wrap gap-y-7 items-center justify-center sm:justify-between cursor-pointer `}
           onClick={() => setSelectedAddress('office')}
         >
-          <div className="flex items-center space-x-4">
+          <div className="flex flex-wrap gap-y-4 items-center justify-center space-x-4">
             <img
               src={marker} // Placeholder for address image
               alt="My Office"
               className="w-16 h-16"
             />
-            <div>
+            <div className='text-center sm:text-start'>
               <h3 className="text-lg font-semibold">My Office</h3>
               <p className="text-gray-250 text-sm">46 Larkrow, Main Street, UK</p>
             </div>
@@ -59,8 +59,8 @@ export default function ProfileLocation() {
 
         {/* Add New Address */}
         <div className="mt-6">
-          <h3 className="text-xl font-bold">Add New Address</h3>
-          <div className="mt-5 bg-white px-5 py-3 rounded-xl border  shadow space-y-5">
+          <h3 className="text-lg sm:text-xl font-bold">Add New Address</h3>
+          <div className="mt-5 bg-white px-2.5 sm:px-5 py-3 rounded-xl border  shadow space-y-5">
             <div className="space-y-2.5">
               <label htmlFor="address" className="text-sm font-medium">Address</label>
               <input
@@ -92,7 +92,7 @@ export default function ProfileLocation() {
             </div>
             <div className="space-y-2.5">
               <p className="text-sm font-medium">Label As</p>
-              <div className='flex items-center gap-3.5'>
+              <div className='flex flex-wrap items-center gap-3.5'>
                 <button className='bg-orange-150 px-2.5 pt-[5px] text-white text-sm font-medium rounded-full flex items-center justify-center'>
                   <img src={home} alt='home' />
                   Home

@@ -3,7 +3,7 @@ import FaqItem from '../utility/FaqItem'
 
 export default function ProfileFaqs() {
   return (
-    <div className='p-8 bg-[#0000000A] rounded-xl border space-y-8'>
+    <div className='p-3 sm:p-8 bg-[#0000000A] rounded-xl border space-y-8'>
       <FaqItem
         title="How can i cancel my order?"
         description="When you start and order you can cancel it by clicking the logo on home page. You can find cancel button there. When you start and order you can cancel it by clicking the logo on home page. You can find cancel button there.  When you start and order you can cancel it by clicking the logo on home page. You can find cancel button there.  When you start and order you can cancel it by clicking the logo on home page. You can find cancel button there."

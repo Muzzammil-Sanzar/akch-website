@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 const cartItems = [
   { id: "1", name: "High Ghee Tirunelveli Halwa", price: 300, quantity: 1, weight: "500 gm", image: "https://images.unsplash.com/photo-1517244683847-7456b63c5969?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGFsd2ElMjBkaXNofGVufDB8fDB8fHww" },
@@ -14,8 +15,8 @@ export default function CartItems() {
   return (
     <div className=" space-y-10 w-full">
       <div className="space-y-8 w-full relative overflow-x-auto">
-        <table className="w-full text-lg font-semibold text-left text-gray-150">
-          <thead className="text-2xl text-gray-150 capitalize border-b">
+        <table className="w-full text-base sm:text-lg sm:font-semibold text-left text-gray-150">
+          <thead className="text-lg font-medium sm:text-2xl text-gray-150 capitalize border-b">
             <tr>
               <th scope="col" className="px-6 py-4">Image</th>
               <th scope="col" className="px-6 py-4">Product Name</th>
@@ -94,7 +95,11 @@ export default function CartItems() {
         <div colSpan={4}>Total</div>
         <div className="text-right font-bold text-orange-150">₹ {total.toFixed(2)}</div>
       </div>
-      <button className="w-full bg-orange-150 text-white py-2.5 md:py-5 rounded-full">Continue</button>
+      <div>
+        <Link to={'/checkout'}>
+          <button className="w-full bg-orange-150 text-white py-2.5 md:py-5 rounded-full">Continue</button>
+        </Link>
+      </div>
     </div>
   )
 }

@@ -18,7 +18,7 @@ export default function LeaveRating() {
         Your email address remains confidential and will not be disclosed. Your information is secure here.
       </p>
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="flex space-x-4">
+        <div className="flex flex-col md:flex-row gap-5 md:space-x-4">
           <div className="flex-1">
             <input
               type="email"

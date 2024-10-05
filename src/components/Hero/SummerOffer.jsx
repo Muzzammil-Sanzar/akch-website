@@ -23,7 +23,7 @@ export default function SummerOffer() {
                 </div>
               </div>
               <div className="basis-full lg:basis-2/3">
-                <div className="lg:absolute bottom-0 right-0">
+                <div className="lg:absolute bottom-0 lg:right-10 xl:right-28">
                   <img src={sale} alt="akch" />
                 </div>
               </div>

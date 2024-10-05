@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState('https://images.unsplash.com/photo-1610432589024-5f02f76549cf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); // Default image
@@ -12,15 +13,15 @@ export default function Gallery() {
   ];
   return (
     <div className="max-w-5xl mx-auto">
-      <div className="flex gap-12">
+      <div className="flex flex-wrap md:flex-nowrap gap-12">
         {/* Left: Image Gallery */}
-        <div className="basis-1/2">
+        <div className="md:basis-1/2">
           {/* Main Image */}
           <div className="border mb-4">
             <img src={selectedImage} alt="Main product" className="w-full h-auto rounded-lg" />
           </div>
           {/* Image Slideshow */}
-          <div className="flex space-x-2">
+          <div className="flex flex-wrap gap-1 md:space-x-2">
             {images.map((img, idx) => (
               <div
                 key={idx}
@@ -34,12 +35,12 @@ export default function Gallery() {
         </div>
 
         {/* Right: Product Info */}
-        <div className="basis-1/2">
+        <div className="md:basis-1/2">
           <div className='space-y-5'>
-            <div className='flex items-center justify-between'>
-              <div className='flex items-center gap-2'>
+            <div className='flex flex-wrap gap-y-4 items-center justify-between'>
+              <div className='flex flex-wrap gap-y-4 items-center gap-2'>
                 <h1 className="text-2xl font-semibold">High Ghee Tirunelvali Halwa</h1>
-                <span className="text-green-600 bg-green-600/10 px-2 py-0.5 font-medium rounded-full text-xs">In Stock</span>
+                <span className="text-green-600 whitespace-nowrap bg-green-600/10 px-2 py-0.5 font-medium rounded-full text-xs">In Stock</span>
               </div>
               <div>
                 <svg width="29" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -100,7 +101,7 @@ export default function Gallery() {
           </div>
 
           {/* Add to Cart */}
-          <div className="flex items-center justify-between mt-6 space-x-4 border-y py-5">
+          <div className="flex flex-col gap-y-5 lg:flex-row items-center justify-between mt-6 space-x-4 border-y py-5">
             <div className="flex items-center space-x-2 border px-4 py-2 rounded-full">
               <div className='w-8 h-8 rounded-full bg-[#F2F2F2] flex items-center justify-center'>
                 <button className="text-gray-250 font-medium">-</button>
@@ -110,12 +111,14 @@ export default function Gallery() {
                 <button className="text-gray-900 font-medium">+</button>
               </div>
             </div>
-            <button className="bg-orange-150 text-white px-6 w-full py-3 rounded-full hover:bg-yellow-600 duration-200 flex items-center justify-center gap-4">
-              Add to Cart
-              <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18.1855 0.149902H1.68555C1.28772 0.149902 0.906191 0.307938 0.624887 0.589242C0.343582 0.870547 0.185547 1.25208 0.185547 1.6499V15.1499C0.185547 15.5477 0.343582 15.9293 0.624887 16.2106C0.906191 16.4919 1.28772 16.6499 1.68555 16.6499H18.1855C18.5834 16.6499 18.9649 16.4919 19.2462 16.2106C19.5275 15.9293 19.6855 15.5477 19.6855 15.1499V1.6499C19.6855 1.25208 19.5275 0.870547 19.2462 0.589242C18.9649 0.307938 18.5834 0.149902 18.1855 0.149902ZM9.93555 9.1499C8.74245 9.14866 7.59858 8.67416 6.75494 7.83051C5.91129 6.98687 5.43679 5.843 5.43555 4.6499C5.43555 4.45099 5.51456 4.26022 5.65522 4.11957C5.79587 3.97892 5.98663 3.8999 6.18555 3.8999C6.38446 3.8999 6.57522 3.97892 6.71588 4.11957C6.85653 4.26022 6.93555 4.45099 6.93555 4.6499C6.93555 5.44555 7.25162 6.20861 7.81423 6.77122C8.37684 7.33383 9.1399 7.6499 9.93555 7.6499C10.7312 7.6499 11.4943 7.33383 12.0569 6.77122C12.6195 6.20861 12.9355 5.44555 12.9355 4.6499C12.9355 4.45099 13.0146 4.26022 13.1552 4.11957C13.2959 3.97892 13.4866 3.8999 13.6855 3.8999C13.8845 3.8999 14.0752 3.97892 14.2159 4.11957C14.3565 4.26022 14.4355 4.45099 14.4355 4.6499C14.4343 5.843 13.9598 6.98687 13.1162 7.83051C12.2725 8.67416 11.1286 9.14866 9.93555 9.1499Z" fill="white" />
-              </svg>
-            </button>
+            <Link className='w-full' to={"/cart"}>
+              <button className="bg-orange-150 text-white px-6 w-full py-3 rounded-full hover:bg-yellow-600 duration-200 flex items-center justify-center gap-4">
+                Add to Cart
+                <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.1855 0.149902H1.68555C1.28772 0.149902 0.906191 0.307938 0.624887 0.589242C0.343582 0.870547 0.185547 1.25208 0.185547 1.6499V15.1499C0.185547 15.5477 0.343582 15.9293 0.624887 16.2106C0.906191 16.4919 1.28772 16.6499 1.68555 16.6499H18.1855C18.5834 16.6499 18.9649 16.4919 19.2462 16.2106C19.5275 15.9293 19.6855 15.5477 19.6855 15.1499V1.6499C19.6855 1.25208 19.5275 0.870547 19.2462 0.589242C18.9649 0.307938 18.5834 0.149902 18.1855 0.149902ZM9.93555 9.1499C8.74245 9.14866 7.59858 8.67416 6.75494 7.83051C5.91129 6.98687 5.43679 5.843 5.43555 4.6499C5.43555 4.45099 5.51456 4.26022 5.65522 4.11957C5.79587 3.97892 5.98663 3.8999 6.18555 3.8999C6.38446 3.8999 6.57522 3.97892 6.71588 4.11957C6.85653 4.26022 6.93555 4.45099 6.93555 4.6499C6.93555 5.44555 7.25162 6.20861 7.81423 6.77122C8.37684 7.33383 9.1399 7.6499 9.93555 7.6499C10.7312 7.6499 11.4943 7.33383 12.0569 6.77122C12.6195 6.20861 12.9355 5.44555 12.9355 4.6499C12.9355 4.45099 13.0146 4.26022 13.1552 4.11957C13.2959 3.97892 13.4866 3.8999 13.6855 3.8999C13.8845 3.8999 14.0752 3.97892 14.2159 4.11957C14.3565 4.26022 14.4355 4.45099 14.4355 4.6499C14.4343 5.843 13.9598 6.98687 13.1162 7.83051C12.2725 8.67416 11.1286 9.14866 9.93555 9.1499Z" fill="white" />
+                </svg>
+              </button>
+            </Link>
             <div>
               <div className='w-12 h-12 rounded-full bg-orange-250 flex items-center justify-center'>
                 <button className="text-gray-900 font-medium">

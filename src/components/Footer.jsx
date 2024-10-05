@@ -26,10 +26,10 @@ export default function Footer() {
                   <h2 className="text-lg lg:text-2xl font-medium lg:font-bold capitalize">news letter</h2>
                   <p className="text-gray-250 text-sm lg:text-base">Subscribe to our new channel to get latest updates</p>
                 </div>
-                <div className="flex flex-wrap items-center justify-center bg-white px-6 xxs:px-2 py-2 border border-gray-300 rounded-full shadow-md overflow-hidden max-w-md">
+                <div className="flex flex-wrap gap-y-4 items-center justify-center sm:justify-between bg-white px-6 xxs:px-2 py-2 border border-gray-300 rounded-full shadow-md overflow-hidden max-w-md">
                   <input
                     type="text"
-                    className="flex-grow p-2 text-gray-700 focus:outline-none rounded-l-full"
+                    className="flex-grow p-2 min-w-40 text-gray-150 focus:outline-none rounded-l-full"
                     placeholder="Your Email Adress"
                   />
                   <button className="bg-orange-150 hover:bg-orange-400 text-white rounded-full px-4 py-2 flex items-center gap-1">

@@ -8,7 +8,7 @@ import CommonSizes from "../layouts/CommonSizes";
 
 export default function HomePage() {
   return (
-    <div className="space-y-[100px]">
+    <div className="space-y-20 py-20">
       <CommonSizes>
         <CommonPadding>
           <Explore />

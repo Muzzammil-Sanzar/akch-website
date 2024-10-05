@@ -13,7 +13,7 @@ export default function Categories() {
               <p className=" text-xs sm:text-base max-w-2xl mx-auto text-gray-250">Order South-Indian traditional food and Sweets of restaurants and shops in South-India.</p>
             </div>
           </CommonPadding>
-          <div>
+          <div className="px-14">
             <ServicesCarousel />
           </div>
         </div>

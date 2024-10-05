@@ -8,10 +8,15 @@ import { GoBell } from "react-icons/go";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { useState } from 'react';
+import { Link } from "react-router-dom";
+import LoginModal from "./login/LoginModal";
+import SignUP from "./login/SignUp";
 
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isSignUP, setIsSignUp] = useState(false);
   return (
     <div className=" ">
       <div className="bg-orange-150 text-white text-xs py-3  ">
@@ -28,12 +33,16 @@ export default function Navbar() {
         <div className="border-b border-orange-250">
           <CommonPadding>
             <div className="flex items-center justify-between py-6">
-              <div className="flex items-center gap-1">
-                <img src={logo} alt="logo" />
-                <h2 className="text-xl akch text-orange-150">AKCH</h2>
-              </div>
-              <div className='lg:flex items-center gap-4 xl1:gap-[30px] hidden'>
-                <p>Home</p>
+              <Link to={'/'}>
+                <div className="flex items-center gap-1">
+                  <img src={logo} alt="logo" />
+                  <h2 className="text-xl akch text-orange-150">AKCH</h2>
+                </div>
+              </Link>
+              <div className='llg:flex items-center gap-4 xl1:gap-[30px] hidden'>
+                <Link to={"/"} className="cursor-pointer">
+                  <p>Home</p>
+                </Link>
                 <Categories />
                 <Products />
                 <p>About Us</p>
@@ -52,8 +61,8 @@ export default function Navbar() {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <button className="font-semibold">Sign Up</button>
-                  <button className="font-semibold text-sm text-white bg-orange-150 rounded-full py-2 px-9">Login</button>
+                  <button onClick={e => setIsSignUp(true)} className="font-semibold">Sign Up</button>
+                  <button onClick={e => setIsOpen(true)} className="font-semibold text-sm text-white bg-orange-150 rounded-full py-2 px-9">Login</button>
                 </div>
               </div>
               <div className="lg:hidden">
@@ -70,9 +79,9 @@ export default function Navbar() {
         className={`fixed top-0 left-0 w-64 h-screen z-40 bg-white transition-transform transform ${menuOpen ? 'translate-x-0' : '-translate-x-full'
           }`}
       >
-        <div className="h-full px-5 py-4 overflow-y-auto">
+        <div className="h-full px-5 py-16 overflow-y-auto">
           <ul className="space-y-6 font-semibold text-gray-800">
-            <li><p>Home</p></li>
+            <li className="cursor-pointer"><Link to={"/"}><p>Home</p></Link></li>
             <li><Categories /></li>
             <li><Products /></li>
             <li><p>About Us</p></li>
@@ -84,6 +93,8 @@ export default function Navbar() {
           </ul>
         </div>
       </aside>
+      <LoginModal isOpen={isOpen} setIsOpen={setIsOpen} setSignUp={setIsSignUp} />
+      <SignUP isOpen={isSignUP} setIsOpen={setIsSignUp} setLogin={setIsOpen} />
     </div>
   )
 }

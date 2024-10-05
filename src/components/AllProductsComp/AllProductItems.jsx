@@ -1,19 +1,12 @@
-import { GoArrowUpRight } from "react-icons/go";
+import React from 'react'
+import { FaStar } from 'react-icons/fa6'
+import { Link } from 'react-router-dom';
 import favorite from "../../assets/favorite.svg";
-import { FaStar } from "react-icons/fa6";
-import { Link } from "react-router-dom";
 
-export default function Products() {
+export default function AllProductItems() {
   return (
-    <div className="space-y-11">
-      <div className="flex flex-wrap gap-y-5 items-center justify-between">
-        <h2 className="text-3xl font-medium">Popular Products</h2>
-        <div className="flex items-center gap-3 bg-orange-150 rounded-full font-medium px-7 py-4 text-white">
-          <button>View all</button>
-          <GoArrowUpRight />
-        </div>
-      </div>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-7 gap-y-[60px]">
+    <div>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-x-7 gap-y-[60px]">
         {[...Array(8)].map((card, index) => (
           <div key={index} className='space-y-3 cursor-pointer' >
             <div className='rounded-xl w-full h-[302px] relative overflow-hidden'>

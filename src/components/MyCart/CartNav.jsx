@@ -6,7 +6,7 @@ export default function CartNav({ title }) {
     <div className="bg-[#EFA937DE] py-3 text-center">
       <CommonSizes>
         <CommonPadding>
-          <h1 className="uppercase text-[42px] font-bold">{title ? title : "MY Cart"}</h1>
+          <h1 className="uppercase text-[30px] sm:text-[42px] font-bold">{title ? title : "MY Cart"}</h1>
         </CommonPadding>
       </CommonSizes>
     </div>

@@ -59,7 +59,7 @@ export default function RelatedItemsCarousel() {
   return (
     <section className="embla4 flex items-center">
       <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-      <div className="embla__viewport4 px-6" ref={emblaRef}>
+      <div className="embla__viewport4 px-2 sm:px-6" ref={emblaRef}>
         <div className="embla__container4">
           {services.map((service, index) => (
             <div key={index} className="embla__slide4">
@@ -75,7 +75,7 @@ export default function RelatedItemsCarousel() {
                 <div>
                   <Link to={"/product"}>
                     <p className="font-medium capitalize">high ghee tirunelvali halwa</p>
-                    <div className="flex items-center justify-between w-full">
+                    <div className="flex flex-wrap items-center justify-between w-full">
                       <div className="flex items-center gap-2">
                         <p className="font-bold text-lg">₹ 300 <span className="text-xs text-gray-250 font-normal">/500 gm</span></p>
                       </div>
@@ -97,7 +97,9 @@ export default function RelatedItemsCarousel() {
                   </Link>
                 </div>
                 <div>
-                  <button className="rounded-full border border-orange-150 text-sm font-semibold py-3 w-full hover:bg-orange-150 hover:text-white">Add to Cart</button>
+                  <Link to={"/cart"}>
+                    <button className="rounded-full border border-orange-150 text-sm font-semibold py-3 w-full hover:bg-orange-150 hover:text-white">Add to Cart</button>
+                  </Link>
                 </div>
               </div>
             </div>
